@@ -26,6 +26,16 @@
             android:name=".IntentActivityTestOther"
             android:label="@string/app_name" >
         </activity>
+
+        <activity
+            android:name=".IntentAndResultActivityTest"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name=".IntentAndResultActivityTestOther"
+            android:label="@string/app_name" >
+        </activity>
     </application>
 
 </manifest>

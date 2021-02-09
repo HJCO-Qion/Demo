@@ -14,8 +14,15 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.IntentActivityTest();//Intent测试
+//        this.IntentActivityTest();//Intent测试
+        this.IntentAndResultActivityTest();//Intent带返回结果测试
     }
+    public void IntentAndResultActivityTest(){
+        Intent intent = new Intent(MainActivity.this, IntentAndResultActivityTest.class);
+        this.startActivity(intent);
+        this.finish();
+    }
+
     public void IntentActivityTest(){
         Intent intent = new Intent(MainActivity.this, IntentActivityTest.class);
         this.startActivity(intent);
