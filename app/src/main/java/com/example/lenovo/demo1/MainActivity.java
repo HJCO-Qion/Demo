@@ -15,8 +15,15 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
 //        this.IntentActivityTest();//Intent测试
-        this.IntentAndResultActivityTest();//Intent带返回结果测试
+//        this.IntentAndResultActivityTest();//Intent带返回结果测试
+        this.IntentAndImgResultActivityTest();//使用Intent从图库获取图片并显示
     }
+    public void IntentAndImgResultActivityTest(){
+        Intent intent = new Intent(MainActivity.this, IntentAndImgResultActivityTest.class);
+        this.startActivity(intent);
+        this.finish();
+    }
+
     public void IntentAndResultActivityTest(){
         Intent intent = new Intent(MainActivity.this, IntentAndResultActivityTest.class);
         this.startActivity(intent);
