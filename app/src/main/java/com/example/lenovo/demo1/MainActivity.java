@@ -16,8 +16,17 @@ public class MainActivity extends Activity {
 
 //        this.IntentActivityTest();//Intent测试
 //        this.IntentAndResultActivityTest();//Intent带返回结果测试
-        this.IntentAndImgResultActivityTest();//使用Intent从图库获取图片并显示
+        this.LifeCycleActivityTest();//生命周期测试
+
+//        this.IntentAndImgResultActivityTest();//使用Intent从图库获取图片并显示，未完成。
     }
+
+    public void LifeCycleActivityTest(){
+        Intent intent = new Intent(MainActivity.this, LifeCycleActivityTest.class);
+        this.startActivity(intent);
+        this.finish();
+    }
+
     public void IntentAndImgResultActivityTest(){
         Intent intent = new Intent(MainActivity.this, IntentAndImgResultActivityTest.class);
         this.startActivity(intent);
