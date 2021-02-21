@@ -55,6 +55,29 @@
             android:name=".DialogActivity"
             android:theme="@android:style/Theme.Dialog" >
         </activity>
+
+        <activity
+            android:name=".StandardActivityTest"
+            android:label="This is StandardActivity">
+        </activity>
+
+        <activity
+            android:name=".SingleTopActivityTest"
+            android:label="This is SingleTopActivity"
+            android:launchMode="singleTop">
+        </activity>
+
+        <activity
+            android:name=".SingleTaskActivityTest"
+            android:label="This is SingleTaskActivity"
+            android:launchMode="singleTask">
+        </activity>
+
+        <activity
+            android:name=".SingleInstanceActivityTest"
+            android:label="This is SingleInstanceActivity"
+            android:launchMode="singleInstance">
+        </activity>
     </application>
 
 </manifest>

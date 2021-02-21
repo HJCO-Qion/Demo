@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OpenStandardActivity"
+        android:id="@+id/b_openStandardActivity"
+        android:textAllCaps="false"
+        android:onClick="addOnClickListener" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OpenSingleTopActivity"
+        android:id="@+id/b_openSingleTopActivity"
+        android:textAllCaps="false"
+        android:onClick="addOnClickListener" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OpenSingleTaskActivity"
+        android:id="@+id/b_openSingleTaskActivity"
+        android:textAllCaps="false"
+        android:onClick="addOnClickListener" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OpenSingleInstanceActivity"
+        android:id="@+id/b_openSingleInstanceActivity"
+        android:textAllCaps="false"
+        android:onClick="addOnClickListener" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/tv_showActivityAddress"
+        android:textSize="20dp" />
+</LinearLayout>
