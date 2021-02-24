@@ -78,6 +78,11 @@
             android:label="This is SingleInstanceActivity"
             android:launchMode="singleInstance">
         </activity>
+
+        <activity
+            android:name=".SimpleChatActivityTest"
+            android:label="@string/app_name" >
+        </activity>
     </application>
 
 </manifest>

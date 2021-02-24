@@ -17,10 +17,18 @@ public class MainActivity extends Activity {
 //        this.IntentActivityTest();//Intent测试
 //        this.IntentAndResultActivityTest();//Intent带返回结果测试
 //        this.LifeCycleActivityTest();//生命周期测试
-        this.StandardActivityTest();//测试活动的启动模式
+//        this.StandardActivityTest();//测试活动的启动模式
+        this.SimpleChatActivityTest();//简单的实现手机与Linux服务器的通讯聊天
+
 
 
 //        this.IntentAndImgResultActivityTest();//使用Intent从图库获取图片并显示，未完成。
+    }
+
+    public void SimpleChatActivityTest(){
+        Intent intent = new Intent(MainActivity.this, SimpleChatActivityTest.class);
+        this.startActivity(intent);
+        this.finish();
     }
 
     public void StandardActivityTest(){

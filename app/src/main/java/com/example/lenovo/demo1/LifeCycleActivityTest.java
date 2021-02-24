@@ -20,6 +20,7 @@ public class LifeCycleActivityTest extends Activity {
         setContentView(R.layout.life_cycle_activity_test);
         initMemberVariable();
         addOnClickListener();
+        Log.d("TAG", "LifeCycleActivityTest-->onCreate(Bundle savedInstanceState)");
     }
 
     private void addOnClickListener() {
