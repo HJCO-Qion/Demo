@@ -22,6 +22,13 @@ import java.net.UnknownHostException;
 import android.os.Handler;
 
 /**
+ * 总结：
+ * 一共三个线程：
+ * Linux服务器：负责接收、处理、转发。
+ * main：负责初始化、发送信息。
+ * main子线程：负责接收信息并显示。（Linux服务器-->main子线程-->Hander-->main的TextView）
+ * 整个过程涉及到的知识：网络编程、线程通信。
+ *
  * Created by 陈亚东 on 2018/9/28.
  */
 public class SimpleChatActivityTest extends Activity {
@@ -38,12 +45,11 @@ public class SimpleChatActivityTest extends Activity {
     class MyRunnable implements Runnable {
         @Override
         public void run() {
+            InputStream inputStream = null;
             try {
-//                socket = new Socket("172.16.63.132", 9999);
-//                socket = new Socket("39.108.190.151", 9999);
-                socket = new Socket("47.106.110.142", 9999);
+                socket = new Socket("39.108.190.151", 9999);
 
-                InputStream inputStream = socket.getInputStream();
+                inputStream = socket.getInputStream();
                 byte[] bytes = new byte[1024];
                 while (true) {
                     int readLength = inputStream.read(bytes);
@@ -61,12 +67,29 @@ public class SimpleChatActivityTest extends Activity {
                 }
             } catch (IOException e) {
                 e.printStackTrace();
+            }finally {
+                if (inputStream != null) {
+                    try {
+                        inputStream.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if (socket != null) {
+                    try {
+                        socket.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
         }
     }
     private TextView tv_acceptedMsg;
     private EditText et_msg;
     private Button btn_sendMsg;
+
+    private OutputStream outputStream;
 
     private Socket socket;
     private MyHander myHander;
@@ -75,21 +98,26 @@ public class SimpleChatActivityTest extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        //设置页面布局
         setContentView(R.layout.simple_chat_activity_test);
 
+        //初始化布局组件
         tv_acceptedMsg = (TextView) findViewById(R.id.tv_acceptedMsg);
         et_msg = (EditText) findViewById(R.id.et_msg);
         btn_sendMsg = (Button) findViewById(R.id.btn_sendMsg);
 
+        //初始化Hander
         myHander = new MyHander();
 
+        //启动一个线程
         new Thread(new MyRunnable()).start();
 
+        //为发送按钮初始化监听事件
         btn_sendMsg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try {
-                    OutputStream outputStream = socket.getOutputStream();
+                    outputStream = socket.getOutputStream();
                     byte[] bytes = et_msg.getText().toString().getBytes();
                     outputStream.write(bytes);
                 } catch (IOException e) {
@@ -100,4 +128,22 @@ public class SimpleChatActivityTest extends Activity {
 
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (outputStream != null) {
+            try {
+                outputStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        if (socket != null) {
+            try {
+                socket.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }
