@@ -86,6 +86,16 @@
             android:name=".SimpleChatActivityTest"
             android:label="@string/app_name" >
         </activity>
+
+        <activity
+            android:name=".LinearLayoutActivityTest"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name=".RelativeLayoutActivityTest"
+            android:label="@string/app_name" >
+        </activity>
     </application>
 
 </manifest>
