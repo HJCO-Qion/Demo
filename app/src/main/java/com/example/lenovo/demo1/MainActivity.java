@@ -21,11 +21,18 @@ public class MainActivity extends Activity {
 //        this.SimpleChatActivityTest();//简单的实现手机与Linux服务器的通讯聊天
 //        this.LinearLayoutActivityTest();//LinearLayout测试
 //        this.RelativeLayoutActivityTest();//RelativeLayout测试
-        this.PercentLayoutActivityTest();//百分比布局测试
+//        this.PercentLayoutActivityTest();//百分比布局测试
+        this.DialogActivity();//微信气泡对话框测试
 
 
 
 //        this.IntentAndImgResultActivityTest();//使用Intent从图库获取图片并显示，未完成。
+    }
+
+    public void DialogActivity(){
+        Intent intent = new Intent(MainActivity.this, DialogActivity.class);
+        this.startActivity(intent);
+        this.finish();
     }
 
     public void PercentLayoutActivityTest(){
