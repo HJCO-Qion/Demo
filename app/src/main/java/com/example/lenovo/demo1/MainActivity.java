@@ -22,10 +22,10 @@ public class MainActivity extends Activity {
 //        this.LinearLayoutActivityTest();//LinearLayout测试
 //        this.RelativeLayoutActivityTest();//RelativeLayout测试
 //        this.PercentLayoutActivityTest();//百分比布局测试
-        this.DialogActivity();//微信气泡对话框测试
 
 
 
+//        this.DialogActivity();//微信气泡对话框测试，未完成。
 //        this.IntentAndImgResultActivityTest();//使用Intent从图库获取图片并显示，未完成。
     }
 

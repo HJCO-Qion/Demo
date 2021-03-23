@@ -10,26 +10,29 @@
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true">
         <Button
-            android:text="New Button"
+            android:text="New Button1"
             android:id="@+id/button1"
-            app:layout_widthPercent="25%"
-            android:layout_height="wrap_content"/>
+            app:layout_widthPercent="50%"
+            app:layout_heightPercent="50%"
+            android:layout_gravity="left|top"/>
         <Button
-            android:layout_below="@id/button1"
-            android:text="New Button"
+            android:text="New Button2"
             android:id="@+id/button2"
-            app:layout_widthPercent="25%"
-            android:layout_height="wrap_content" />
+            app:layout_widthPercent="50%"
+            app:layout_heightPercent="50%"
+            android:layout_gravity="right|top"/>
         <Button
-            android:text="New Button"
+            android:text="New Button3"
             android:id="@+id/button3"
-            app:layout_widthPercent="25%"
-            android:layout_height="wrap_content"/>
+            app:layout_widthPercent="50%"
+            app:layout_heightPercent="50%"
+            android:layout_gravity="left|bottom"/>
         <Button
-            android:text="New Button"
+            android:text="New Button4"
             android:id="@+id/button4"
-            app:layout_widthPercent="25%"
-            android:layout_height="wrap_content"/>
+            app:layout_widthPercent="50%"
+            app:layout_heightPercent="50%"
+            android:layout_gravity="right|bottom"/>
     </android.support.percent.PercentFrameLayout>
 
 </RelativeLayout>

@@ -11,5 +11,6 @@ public class PercentLayoutActivityTest extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        this.setContentView(R.layout.percent_layout_activity_test);
     }
 }
