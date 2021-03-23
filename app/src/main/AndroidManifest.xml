@@ -1,106 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.lenovo.demo1" >
+    package="com.example.lenovo.demo1">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
-
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".IntentActivityTest"
-            android:label="@string/app_name" >
-        </activity>
-
+            android:label="@string/app_name" />
         <activity
             android:name=".IntentActivityTestOther"
-            android:label="@string/app_name" >
-        </activity>
-
+            android:label="@string/app_name" />
         <activity
             android:name=".IntentAndResultActivityTest"
-            android:label="@string/app_name" >
-        </activity>
-
+            android:label="@string/app_name" />
         <activity
             android:name=".IntentAndResultActivityTestOther"
-            android:label="@string/app_name" >
-        </activity>
-
+            android:label="@string/app_name" />
         <activity
             android:name=".IntentAndImgResultActivityTest"
-            android:label="@string/app_name" >
-        </activity>
-
+            android:label="@string/app_name" />
         <activity
             android:name=".LifeCycleActivityTest"
-            android:label="@string/app_name" >
-        </activity>
-
-        <activity
-            android:name=".NormalActivity" >
-        </activity>
-
+            android:label="@string/app_name" />
+        <activity android:name=".NormalActivity" />
         <activity
             android:name=".DialogActivity"
-            android:theme="@android:style/Theme.Dialog" >
-        </activity>
-
+            android:theme="@android:style/Theme.Dialog" />
         <activity
             android:name=".StandardActivityTest"
-            android:label="This is StandardActivity">
-        </activity>
-
+            android:label="This is StandardActivity" />
         <activity
             android:name=".SingleTopActivityTest"
             android:label="This is SingleTopActivity"
-            android:launchMode="singleTop">
-        </activity>
-
+            android:launchMode="singleTop" />
         <activity
             android:name=".SingleTaskActivityTest"
             android:label="This is SingleTaskActivity"
-            android:launchMode="singleTask">
-        </activity>
-
+            android:launchMode="singleTask" />
         <activity
             android:name=".SingleInstanceActivityTest"
             android:label="This is SingleInstanceActivity"
-            android:launchMode="singleInstance">
-        </activity>
-
+            android:launchMode="singleInstance" />
         <activity
             android:name=".SimpleChatActivityTest"
-            android:label="@string/app_name" >
-        </activity>
-
+            android:label="@string/app_name" />
         <activity
             android:name=".LinearLayoutActivityTest"
-            android:label="@string/app_name" >
-        </activity>
-
+            android:label="@string/app_name" />
         <activity
             android:name=".RelativeLayoutActivityTest"
-            android:label="@string/app_name" >
-        </activity>
-
+            android:label="@string/app_name" />
         <activity
             android:name=".PercentLayoutActivityTest"
-            android:label="@string/app_name" >
-        </activity>
+            android:label="@string/app_name" />
+        <activity android:name=".FragmentActivityTest" />
     </application>
 
 </manifest>

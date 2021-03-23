@@ -22,11 +22,18 @@ public class MainActivity extends Activity {
 //        this.LinearLayoutActivityTest();//LinearLayout测试
 //        this.RelativeLayoutActivityTest();//RelativeLayout测试
 //        this.PercentLayoutActivityTest();//百分比布局测试
+        this.FragmentActivityTest();//碎片的简单用法测试。
 
 
 
 //        this.DialogActivity();//微信气泡对话框测试，未完成。
 //        this.IntentAndImgResultActivityTest();//使用Intent从图库获取图片并显示，未完成。
+    }
+
+    public void FragmentActivityTest(){
+        Intent intent = new Intent(MainActivity.this, FragmentActivityTest.class);
+        this.startActivity(intent);
+        this.finish();
     }
 
     public void DialogActivity(){
