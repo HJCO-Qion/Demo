@@ -4,14 +4,16 @@
     android:orientation="vertical">
 
     <Button
+        android:id="@+id/b_startNormalActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Start NormalActivity（打开一个新的活动界面）"
-        android:id="@+id/b_startNormalActivity" />
+        android:textAllCaps="false" />
 
     <Button
+        android:id="@+id/b_startDialogActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Start DialogActivity（打开一个对话框）"
-        android:id="@+id/b_startDialogActivity" />
+        android:textAllCaps="false" />
 </LinearLayout>

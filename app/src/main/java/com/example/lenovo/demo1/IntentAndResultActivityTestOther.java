@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 /**
  * Created by Lenovo on 2018/9/13.
@@ -25,5 +26,15 @@ public class IntentAndResultActivityTestOther extends Activity {
                 IntentAndResultActivityTestOther.this.finish();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+//        super.onBackPressed();//此句不要添加，会影响下列代码。
+
+        Intent intent = new Intent();
+        intent.putExtra("data_return", "Hello FirstActivity");
+        IntentAndResultActivityTestOther.this.setResult(IntentAndResultActivityTestOther.this.RESULT_OK, intent);
+        IntentAndResultActivityTestOther.this.finish();
     }
 }

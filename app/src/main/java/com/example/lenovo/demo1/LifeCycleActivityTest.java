@@ -18,8 +18,10 @@ public class LifeCycleActivityTest extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.life_cycle_activity_test);
+
         initMemberVariable();
         addOnClickListener();
+
         Log.d("TAG", "LifeCycleActivityTest-->onCreate(Bundle savedInstanceState)");
     }
 
@@ -34,7 +36,7 @@ public class LifeCycleActivityTest extends Activity {
         b_startDialogActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LifeCycleActivityTest.this, DialogActivity.class);
+                Intent intent = new Intent(LifeCycleActivityTest.this, ChatScreenActivity.class);
                 startActivity(intent);
             }
         });

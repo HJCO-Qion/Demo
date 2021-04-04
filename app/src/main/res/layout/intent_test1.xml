@@ -6,15 +6,41 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="这是第一个界面！"
-        android:id="@+id/textView" />
+        android:text="这是第一个界面！" />
 
     <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="跳转到第二个界面！"
-        android:id="@+id/button" />
+        android:text="显式Intent方式跳转到第二个界面！"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="隐式Intent方式跳转到第二个界面。"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="使用系统浏览器或本Demo1带的浏览功能界面" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="转到系统拨号界面" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="向下一个活动传递数据" />
 
 </LinearLayout>

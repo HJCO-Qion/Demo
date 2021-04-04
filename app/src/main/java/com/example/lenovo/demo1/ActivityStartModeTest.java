@@ -10,17 +10,18 @@ import android.widget.TextView;
 /**
  * Created by Lenovo on 2018/9/25.
  */
-public class StandardActivityTest extends Activity {
+public class ActivityStartModeTest extends Activity {
     String className;
     Activity thisActivity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.standard_activity_test);
+        setContentView(R.layout.activity_start_mode_test);
 
         className = this.getClass().getSimpleName();
         thisActivity = this;
+
         TextView tv_showActivityAddress = (TextView) findViewById(R.id.tv_showActivityAddress);
         tv_showActivityAddress.setText(this.toString());
 
@@ -33,7 +34,7 @@ public class StandardActivityTest extends Activity {
     public void addOnClickListener(View v) {
         switch (v.getId()) {
             case R.id.b_openStandardActivity:
-                Intent intent1 = new Intent(thisActivity, StandardActivityTest.class);
+                Intent intent1 = new Intent(thisActivity, ActivityStartModeTest.class);
                 startActivity(intent1);
                 break;
             case R.id.b_openSingleTopActivity:

@@ -1,38 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.percent.PercentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <android.support.percent.PercentFrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true">
-        <Button
-            android:text="New Button1"
-            android:id="@+id/button1"
-            app:layout_widthPercent="50%"
-            app:layout_heightPercent="50%"
-            android:layout_gravity="left|top"/>
-        <Button
-            android:text="New Button2"
-            android:id="@+id/button2"
-            app:layout_widthPercent="50%"
-            app:layout_heightPercent="50%"
-            android:layout_gravity="right|top"/>
-        <Button
-            android:text="New Button3"
-            android:id="@+id/button3"
-            app:layout_widthPercent="50%"
-            app:layout_heightPercent="50%"
-            android:layout_gravity="left|bottom"/>
-        <Button
-            android:text="New Button4"
-            android:id="@+id/button4"
-            app:layout_widthPercent="50%"
-            app:layout_heightPercent="50%"
-            android:layout_gravity="right|bottom"/>
-    </android.support.percent.PercentFrameLayout>
-
-</RelativeLayout>
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true">
+    <Button
+        android:text="New Button1"
+        android:id="@+id/button1"
+        app:layout_widthPercent="50%"
+        app:layout_heightPercent="50%"
+        android:layout_gravity="left|top"/>
+    <Button
+        android:text="New Button2"
+        android:id="@+id/button2"
+        app:layout_widthPercent="50%"
+        app:layout_heightPercent="50%"
+        android:layout_gravity="right|top"/>
+    <Button
+        android:text="New Button3"
+        android:id="@+id/button3"
+        app:layout_widthPercent="50%"
+        app:layout_heightPercent="50%"
+        android:layout_gravity="left|bottom"/>
+    <Button
+        android:text="New Button4"
+        android:id="@+id/button4"
+        app:layout_widthPercent="50%"
+        app:layout_heightPercent="50%"
+        android:layout_gravity="right|bottom"/>
+</android.support.percent.PercentFrameLayout>
