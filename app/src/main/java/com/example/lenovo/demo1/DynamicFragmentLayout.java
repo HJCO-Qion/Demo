@@ -34,13 +34,8 @@ public class DynamicFragmentLayout extends Activity {
         replaceFragment(new RightFragment());
 
         //4.2.4：碎片和活动之间进行通讯：Activity-->Fragment：
-//        LeftFragment leftFragment = (LeftFragment) this.getFragmentManager().findFragmentById(R.id.left_fragment);
-//        Activity activity = leftFragment.getActivity();
-//        Button button1 = activity.findViewById(R.id.button);
-//        button1.setText(button1.getText() + "（Activity追加字段）" + this.getApplication());
-
-//        LeftFragment leftFragment = (LeftFragment) this.getFragmentManager().findFragmentById(R.id.left_fragment);
-//        leftFragment.test();
+        LeftFragment leftFragment = (LeftFragment) this.getFragmentManager().findFragmentById(R.id.left_fragment);
+        leftFragment.leftFragmentTest();
     }
 
     public void replaceFragment(Fragment fragment) {
@@ -53,6 +48,6 @@ public class DynamicFragmentLayout extends Activity {
     }
 
     public void dynamicFragmentLayoutTest() {
-//        button.setText(button.getText() + "（Fragment调用了Activity）");
+        button.setText(button.getText() + "（Fragment调用了Activity）");
     }
 }

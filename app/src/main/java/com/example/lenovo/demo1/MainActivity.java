@@ -46,12 +46,12 @@ public class MainActivity extends Activity {
 //        this.PercentLayoutActivityTest();//百分比布局测试
 
         //3.7.2：编写精美的聊天界面。
-//        this.ChatScreenActivity();//微信气泡对话框测试。
+        this.ChatScreenActivity();//微信气泡对话框测试。
 
         //4.2.1：碎片的简单用法，静态添加碎片，使用fragment。
 //        this.StaticFragmentActivityTest();//碎片的简单用法测试。
         //4.2.2：动态添加碎片，使用FrameLayout。
-        this.DynamicFragmentLayout();
+//        this.DynamicFragmentLayout();
 
 
 //        this.SimpleChatActivityTest();//简单的实现手机与Linux服务器的通讯聊天
